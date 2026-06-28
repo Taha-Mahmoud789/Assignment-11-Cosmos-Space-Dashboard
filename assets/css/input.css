@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   Custom Styles (non-Tailwind)
+   ============================================ */
+
+/* Sidebar mobile */
+.sidebar-mobile {
+  transform: translateX(-100%);
+}
+.sidebar-mobile.sidebar-open {
+  transform: translateX(0);
+}
+@media (min-width: 1024px) {
+  .sidebar-mobile {
+    transform: translateX(0);
+  }
+}
+
+/* Sidebar overlay */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 45;
+  display: none;
+}
+
+/* Date input */
+.custom-date-input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
+.custom-date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+.date-input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: rgb(30 41 59 / 0.5);
+  border: 1px solid rgb(51 65 85);
+  border-radius: 0.75rem;
+  position: relative;
+  min-width: 160px;
+}
+.date-input-wrapper::before {
+  content: attr(data-date);
+  position: absolute;
+  left: 1rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.date-input-wrapper .custom-date-input {
+  color: transparent;
+}
+.date-input-wrapper:has(.custom-date-input:focus)::before {
+  display: none;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}

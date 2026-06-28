@@ -19,10 +19,10 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" crossorigin href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/output.css" />
   </head>
   <body
-    class="bg-linear-to-br from-space-dark via-slate-900 to-space-blue font-inter text-white"
+    class="bg-gradient-to-br from-space-dark via-slate-900 to-space-blue font-inter text-white"
   >
     <aside
       id="sidebar"
@@ -31,13 +31,13 @@
       <div class="p-4 border-b border-slate-800">
         <div class="flex items-center space-x-3">
           <div
-            class="w-10 h-10 bg-linear-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
+            class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"
           >
             <i class="fas fa-rocket text-white text-lg"></i>
           </div>
           <div>
             <h1
-              class="text-lg font-space font-bold bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+              class="text-lg font-space font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
             >
               COSMOS
             </h1>
@@ -76,7 +76,7 @@
           class="flex items-center space-x-3 px-3 py-2 bg-slate-800 rounded-lg cursor-pointer hover:bg-slate-700 transition-colors"
         >
           <div
-            class="w-8 h-8 bg-linear-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center"
+            class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center"
           >
             <i class="fas fa-user text-white text-sm"></i>
           </div>
@@ -103,7 +103,7 @@
             </button>
             <div>
               <h2
-                class="text-lg lg:text-xl font-space font-bold bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                class="text-lg lg:text-xl font-space font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
               >
                 Space Explorer Dashboard
               </h2>
@@ -220,7 +220,7 @@
                   alt="Astronomy Picture of the Day"
                 />
                 <div
-                  class="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <div class="absolute bottom-6 left-6 right-6">
                     <button
@@ -315,7 +315,7 @@
               class="relative bg-slate-800/30 border border-slate-700 rounded-3xl overflow-hidden group hover:border-blue-500/50 transition-all"
             >
               <div
-                class="absolute inset-0 bg-linear-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity"
+                class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity"
               ></div>
               <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-6 p-8">
                 <div class="flex flex-col justify-between">
@@ -349,7 +349,7 @@
                       </div>
                     </div>
                     <div
-                      class="inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-6"
+                      class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-6"
                     >
                       <i class="fas fa-clock text-2xl text-blue-400"></i>
                       <div>
@@ -433,7 +433,7 @@
                       <i class="fas fa-rocket text-9xl text-slate-700/50"></i>
                     </div>
                     <div
-                      class="absolute inset-0 bg-linear-to-t from-slate-900 via-transparent to-transparent"
+                      class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"
                     ></div>
                   </div>
                 </div>
@@ -1525,6 +1525,12 @@
       </section>
     </div>
 
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/navigation.js"></script>
+    <script src="./assets/js/apod.js"></script>
+    <script src="./assets/js/launches.js"></script>
+    <script src="./assets/js/planets.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
