@@ -168,7 +168,9 @@ const initLaunches = () => {
 
   const loadLaunches = async () => {
     try {
-      const { results = [] } = await safeFetch(CONFIG.LAUNCH_URL);
+      const res = await fetch(CONFIG.LAUNCH_URL);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const { results = [] } = await res.json();
       getCachedEl("launches-count").innerText = `${results.length} Launches`;
       getCachedEl("launches-count-mobile").innerText = results.length;
 

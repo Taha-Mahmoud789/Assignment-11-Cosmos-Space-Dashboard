@@ -172,7 +172,9 @@ const initPlanets = () => {
     showLoading("planet-comparison-tbody", "Loading comparison data...");
 
     try {
-      const data = await safeFetch(CONFIG.PLANET_URL);
+      const res = await fetch(CONFIG.PLANET_URL);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
       PLANET_DATA = data;
       buildTable(data);
 
