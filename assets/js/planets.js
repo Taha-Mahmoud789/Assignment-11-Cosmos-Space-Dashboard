@@ -186,12 +186,8 @@ const initPlanets = () => {
     }
   };
 
-  // Throttled click handler for planet cards
   document.querySelectorAll(".planet-card").forEach((card) => {
-    card.addEventListener(
-      "click",
-      throttle(() => showPlanet(card.dataset.planetId), 200),
-    );
+    card.addEventListener("click", () => showPlanet(card.dataset.planetId));
   });
 
   loadPlanets();

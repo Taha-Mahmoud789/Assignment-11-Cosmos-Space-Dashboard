@@ -77,13 +77,10 @@ const initAPOD = () => {
 
   loadAPOD();
 
-  getCachedEl("load-date-btn").addEventListener(
-    "click",
-    debounce(() => {
-      const d = dateInput.value;
-      if (d) loadAPOD(d);
-    }, 500),
-  );
+  getCachedEl("load-date-btn").addEventListener("click", () => {
+    const d = dateInput.value;
+    if (d) loadAPOD(d);
+  });
 
   getCachedEl("today-apod-btn").addEventListener("click", () => {
     const todayBtn = new Date().toISOString().split("T")[0];
