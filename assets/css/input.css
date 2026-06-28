@@ -70,6 +70,17 @@
   display: none;
 }
 
+/* Line clamp compatibility */
+.line-clamp-1,
+.line-clamp-2,
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--tw-line-clamp);
+  line-clamp: var(--tw-line-clamp);
+}
+
 /* Custom scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
